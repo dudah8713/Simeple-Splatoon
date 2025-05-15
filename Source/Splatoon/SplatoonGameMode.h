@@ -10,7 +10,7 @@ UCLASS(minimalapi)
 class ASplatoonGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
-
+	
 public:
 	ASplatoonGameMode();
 };
