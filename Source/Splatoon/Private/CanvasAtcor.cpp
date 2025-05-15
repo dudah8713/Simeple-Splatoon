@@ -212,7 +212,7 @@ void ACanvasAtcor::GetWidthHeight(int32& OutWidth, int32& OutHeight) const
 	OutHeight = FMath::TruncToInt(WorldScale.Y * UnitPreMeter);
 }
 
-void ACanvasAtcor::CalculateArea()
+float ACanvasAtcor::CalculateArea()
 {
 	TArray<FColor> PixelData;
 	FTextureRenderTargetResource* RTResource = RenderTargetMask->GameThread_GetRenderTargetResource();
@@ -233,4 +233,6 @@ void ACanvasAtcor::CalculateArea()
 	}
 	float CoveragePercent = (CoveredPixels / (float)TotalPixels) * 100.0f;
 	UE_LOG(LogTemp, Log, TEXT("Painted Area Percentage: %f"), CoveragePercent);
+
+	return CoveragePercent;
 }
