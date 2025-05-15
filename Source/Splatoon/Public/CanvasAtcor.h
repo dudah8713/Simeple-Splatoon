@@ -66,7 +66,7 @@ public:
 	void GetWidthHeight(int32& OutWidth, int32& OutHeight) const;
 	
 	UFUNCTION(BlueprintCallable, Category = "Canvas")
-	void CalculateArea();
+	float CalculateArea();
 
 private:
 	float BrushSize;
