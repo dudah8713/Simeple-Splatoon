@@ -70,6 +70,7 @@ public:
 
 private:
 	float BrushSize;
+	float TestValue;
 	int32 BrushTextureWidth;
 	int32 BrushTextureHeight;
 };
